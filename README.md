@@ -22,4 +22,4 @@ O aplicativo rodara no modo de desenvolvimento. Abra em [http://localhost:3000](
 <br>`git clone https://github.com/GabrielCampos99/alicerceTeste.git`
 
 `2° BRANCH: Faz requisição com AXIOS da API: https://swapi.dev/ `
-<br>`git clone --branch startwarAPI https://github.com/GabrielCampos99/alicerceTeste.git`
+<br>`git clone --branch starwarAPI https://github.com/GabrielCampos99/alicerceTeste.git`
