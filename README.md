@@ -6,7 +6,7 @@ Este projeto utiliza um `Array` interno para guardar os Dados.
 
 ## Available Scripts
 
-No diretorio do projeto execute os comandos:
+No diretorio do projeto, execute os comandos:
 
 ### `npm install`
 
