@@ -19,7 +19,7 @@ OU
 O aplicativo rodara no modo de desenvolvimento. Abra em [http://localhost:3000](http://localhost:3000) para ver no navegador.
 
 `1° BRANCH: Array interna para guardar dados.`
-git clone https://github.com/GabrielCampos99/alicerceTeste.git
+<br>`git clone https://github.com/GabrielCampos99/alicerceTeste.git`
 
 `2° BRANCH: Faz requisição com AXIOS da API: https://swapi.dev/ `
-git clone --branch startwarAPI https://github.com/GabrielCampos99/alicerceTeste.git
+<br>`git clone --branch startwarAPI https://github.com/GabrielCampos99/alicerceTeste.git`
