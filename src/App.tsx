@@ -1,24 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import { Route, Switch } from "react-router-dom";
+
+import "./App.css";
+import { Header } from "./components/Header/Header";
+import { NotFound } from "./components/NotFound/NotFound";
+import { Accordion } from "./components/Accordion/Accordion";
+import { fetchData } from "./api";
 
 function App() {
+  const [filmes, setFilmes] = useState<any>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    const fetchedData = async () => {
+      const dados = await fetchData();
+
+      setFilmes(dados);
+      console.log(filmes);
+    };
+    fetchedData();
+    setLoading(false);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Switch>
+        <Route path="/" exact>
+          <Header />
+          {loading && <h1 className="center">Carregando</h1>}
+          {!loading && <Accordion filmes={filmes} />}
+        </Route>
+
+        <Route path="*">
+          <NotFound />
+        </Route>
+      </Switch>
     </div>
   );
 }
